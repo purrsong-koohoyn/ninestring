@@ -5,6 +5,8 @@ import { db } from "./database";
 const app = express();
 
 app.get("/welcome", async (req: Request, res: Response, next: NextFunction) => {
+  console.log("welcome");
+
   try {
     await db.query("INSERT INTO successLog(name) VALUES('호호호호')");
   } catch (error) {
